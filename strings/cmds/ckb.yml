@@ -99,6 +99,11 @@ BLOCKED_COMMAND : ["بلۆککراوەکان"]
 #sPEEDTEST
 SPEEDTEST_COMMAND : ["پشکنینی خێرای", "پشکنینی خێرایی"]
 
+# Clone Bot Commands
+CLONE_COMMAND : ["کڵۆن"]
+CLONED_COMMAND : ["کڵۆنکراوەکان"]
+DELCLONE_COMMAND : ["حەزفکردنی_کڵۆن"]
+
 #Voice chat commands
 ACTIVEVC_COMMAND : ["پەیوەندی چالاک","پەیوەندی دەنگی چالاک"]
 ACTIVEVIDEO_COMMAND : ["پەیوەندی ڤ چالاک","پەیوەندی ڤیدیۆی چالاک"]

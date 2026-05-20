@@ -92,6 +92,11 @@ BLOCKED_COMMAND : ["المحظورين"]
 # Speed Test
 SPEEDTEST_COMMAND : ["السرعة"]
 
+# Clone Bot Commands
+CLONE_COMMAND : ["نسخ"]
+CLONED_COMMAND : ["المنسوخة"]
+DELCLONE_COMMAND : ["حذف_النسخة"]
+
 # Video Calls Command
 VIDEOLIMIT_COMMAND: ["تحديد حد الفيديو"]
 VIDEOMODE_COMMAND: ["وضع الفيديو"]

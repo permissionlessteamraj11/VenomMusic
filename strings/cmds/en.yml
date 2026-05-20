@@ -99,6 +99,14 @@ BLOCKED_COMMAND : ["blockedusers"]
 #sPEEDTEST
 SPEEDTEST_COMMAND : ["speedtest", "spt"]
 
+# Clone Bot Commands
+CLONE_COMMAND : ["clone"]
+CLONED_COMMAND : ["cloned"]
+DELCLONE_COMMAND : ["delclone"]
+
+# Supreme Panel Commands
+SUPREME_COMMAND : ["supreme"]
+
 #Voice chat commands
 ACTIVEVC_COMMAND : ["activevoice","activevc"]
 ACTIVEVIDEO_COMMAND : ["activevideo","activevd"]

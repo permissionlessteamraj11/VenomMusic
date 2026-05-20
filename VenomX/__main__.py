@@ -55,6 +55,8 @@ async def init():
         exit()
 
     await Ayush.decorators()
+    from VenomX.utils.clone_helper import restart_bots
+    asyncio.create_task(restart_bots())
     LOGGER("VenomX").info("VenomX Started Successfully")
     await idle()
     await app.stop()
