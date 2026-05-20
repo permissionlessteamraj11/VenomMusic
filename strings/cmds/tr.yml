@@ -99,6 +99,11 @@ BLOCKED_COMMAND : ["yasaklilar"]
 #HIZ TESTİ
 SPEEDTEST_COMMAND : ["speed", "hiztesti"]
 
+# Clone Bot Commands
+CLONE_COMMAND : ["klonla"]
+CLONED_COMMAND : ["klonlar"]
+DELCLONE_COMMAND : ["klonsil"]
+
 #Sesli sohbet komutları
 ACTIVEVC_COMMAND : ["activevc", "aktifses"]
 ACTIVEVIDEO_COMMAND : ["activevd", "aktifvideo"]

@@ -29,6 +29,7 @@ from VenomX.utils.database import (
     is_served_private_chat,
 )
 from VenomX.utils.decorators.language import LanguageStart
+from VenomX.utils.fonts import get_font
 from VenomX.utils.formatters import get_readable_time
 from VenomX.utils.functions import MARKDOWN, WELCOMEHELP
 from VenomX.utils.inline import private_panel, start_pannel
@@ -209,17 +210,17 @@ async def start_comm(client, message: Message, _):
             try:
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
-                    caption=_["start_1"].format(app.mention),
+                    caption=get_font(_["start_1"].format(app.mention)),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except Exception:
                 await message.reply_text(
-                    text=_["start_1"].format(app.mention),
+                    text=get_font(_["start_1"].format(app.mention)),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
             await message.reply_text(
-                text=_["start_1"].format(app.mention),
+                text=get_font(_["start_1"].format(app.mention)),
                 reply_markup=InlineKeyboardMarkup(out),
             )
         if await is_on_off(config.LOG):
