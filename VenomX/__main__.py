@@ -1,12 +1,15 @@
 
 #
 # All rights reserved.
+import asyncio
 import importlib
+import threading
 
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
+from app import app as flask_app
 from config import BANNED_USERS
 from VenomX import HELPABLE, LOGGER, app, userbot
 from VenomX.core.call import Ayush
@@ -15,6 +18,10 @@ from VenomX.utils.database import get_banned_users, get_gbanned
 
 
 async def init():
+    def run_flask():
+        flask_app.run(host="0.0.0.0", port=int(config.PORT))
+
+    threading.Thread(target=run_flask, daemon=True).start()
     if len(config.STRING_SESSIONS) == 0:
         LOGGER("VenomX").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
@@ -52,7 +59,6 @@ async def init():
         LOGGER("VenomX").error(
             "Please ensure the voice call in your log group is active."
         )
-        exit()
 
     await Ayush.decorators()
     from VenomX.utils.clone_helper import restart_bots
