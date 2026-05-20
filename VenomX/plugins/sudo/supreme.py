@@ -1,7 +1,6 @@
 
 from pyrogram import filters
 from VenomX import app, LOGGER
-from VenomX.utils.database import get_total_clones, get_served_chats
 from config import OWNER_ID
 from strings import command
 from VenomX.utils.clone_helper import get_clones
@@ -9,11 +8,13 @@ import asyncio
 
 @app.on_message(command("SUPREME_COMMAND") & filters.user(OWNER_ID))
 async def supreme_panel(client, message):
+    from VenomX.utils.database import get_total_clones
     total_clones = await get_total_clones()
     await message.reply_text(f"<b>Welcome to Supreme Panel</b>\n\n<b>Total Cloned Bots:</b> {total_clones}\n\n<b>Commands:</b>\n/gclonebroadcast [message] - Broadcast to all chats of all cloned bots.")
 
 @app.on_message(filters.command("gclonebroadcast") & filters.user(OWNER_ID))
 async def gclone_broadcast(client, message):
+    from VenomX.utils.database import get_served_chats
     if len(message.command) < 2 and not message.reply_to_message:
         return await message.reply_text("<b>Usage:</b>\n/gclonebroadcast [message] or reply to a message.")
 
