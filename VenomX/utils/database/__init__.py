@@ -8,10 +8,11 @@ from .assistantdatabase import (get_assistant, get_client, group_assistant,
                                 set_calls_assistant)
 from .clonedb import (add_cloned_bot, delete_cloned_bot, get_cloned_bots,
                       get_total_clones, get_user_clones, is_cloned_bot)
-from .memorydatabase import (add_active_chat, add_active_video_chat, add_filter,
+from .memorydatabase import (add_active_chat, add_active_video_chat,
                              add_off, add_on, autoend_off, autoend_on,
                              check_nonadmin_chat, cleanmode_off, cleanmode_on,
                              commanddelete_off, commanddelete_on, delete_filter,
+                             save_filter,
                              delete_note, deleteall_filters, deleteall_notes,
                              get_active_chats, get_active_video_chats,
                              get_aud_bit_name, get_audio_bitrate, get_cmode,
